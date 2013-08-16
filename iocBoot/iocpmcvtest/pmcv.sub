@@ -1,0 +1,18 @@
+file "motor.db"
+{
+  pattern
+  {    P,        M,        DTYP,    PORT, ADDR,     DESC,  EGU, DIR, VMAX, VELO, VBAS, ACCL, BDST, BVEL, BACC,     MRES, PREC,DHLM,   DLLM, RTRY,   RDBD,  DLY, OFF, INIT }
+  { MLL:,  "pmcv1", "asynMotor",  "PMCV",    0, "PMCV x",   um, Pos,  1.0,  0.1, 0.10,  0.1,    0,    1,   .1, 0.020,    8,  10000,  -10000,    0, 0.0005, 0.05,   0,   "" }
+  { MLL:,  "pmcv2", "asynMotor",  "PMCV",    1, "PMCV y",   um, Pos,  1.0,  0.1, 0.10,  0.1,    0,    1,   .1, 0.020,    8,  10000,  -10000,    0, 0.0005, 0.05,   0,   "" }
+  { MLL:,  "pmcv3", "asynMotor",  "PMCV",    2, "PMCV z",   um, Pos,  1.0,  0.1, 0.10,  0.1,    0,    1,   .1, 0.020,    8,  10000,  -10000,    0, 0.0005, 0.05,   0,   "" }
+}
+
+
+file "$(EPICS_BASE)/db/asynRecord.db"
+{
+  pattern
+  {          P,         R,      PORT,   ADDR,   OMAX, IMAX }
+  {MLL:asyn:,        pmcv,    PMCV,      0,    256,  256 }
+}
+
+

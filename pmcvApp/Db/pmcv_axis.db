@@ -1,0 +1,334 @@
+# readbacks
+
+record(longin, "$(P)$(R)encFrequency_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_ENC_FREQUENCY")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)waveformRes_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_WAVEFORM_RES")
+    field(SCAN, "I/O Intr")
+}
+
+record(stringin, "$(P)$(R)encFrequencyStr_R")
+{
+    field(DTYP, "asynOctetRead")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_ENC_FREQUENCY_STR")
+    field(SCAN, "I/O Intr")
+}
+
+record(stringin, "$(P)$(R)waveformResStr_R")
+{
+    field(DTYP, "asynOctetRead")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_WAVEFORM_RES_STR")
+    field(SCAN, "I/O Intr")
+}
+
+record(stringin, "$(P)$(R)status_R")
+{
+    field(DTYP, "asynOctetRead")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_STATUS")
+    field(SCAN, "I/O Intr")
+}
+
+record(ai, "$(P)$(R)microDelay_R")
+{
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_MICRO_DELAY")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)encParallel_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_ENC_PARALLEL")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)encNoiseFilter_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_ENC_NOISE_FILTER")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)encSyncMode_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_ENC_SYNC_MODE")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)encSwapAb_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_ENC_SWAP_AB")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)encQuadMode_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_ENC_QUAD_MODE")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)encSpiMode_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_ENC_SPI_MODE")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)drvParallel_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_DRV_PARALLEL")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)drvSilent_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_DRV_SILENT")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)drvPark_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_DRV_PARK")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)drvStopIndex_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_DRV_STOP_INDEX")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)drvPosReset_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_DRV_POS_RESET")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)drvTargetMode_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_DRV_TARGET_MODE")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)drvSyncMode_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_DRV_SYNC_MODE")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)lostResponse_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_LOST_RESPONSE")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)syncDz_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_SYNC_DZ")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)speedRampUp_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_SPEED_RAMP_UP")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)speedRampDown_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_SPEED_RAMP_DOWN")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)wpc_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_WPC")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)firmwareId_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_FIRMWARE_ID")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)firmwareVersion_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_FIRMWARE_VERSION")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)minHz_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_MIN_HZ")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)maxHz_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_MAX_HZ")
+    field(SCAN, "I/O Intr")
+}
+
+# write requests
+
+record(longout, "$(P)$(R)speedRampUp")
+{
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_SPEED_RAMP_UP")
+    field(LOPR, 1)
+    field(HOPR, 2200)
+}
+
+record(longout, "$(P)$(R)speedRampDown")
+{
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_SPEED_RAMP_DOWN")
+    field(LOPR, 1)
+    field(HOPR, 2200)
+}
+
+record(ao, "$(P)$(R)microDelay")
+{
+    field(DTYP, "asynFloat64")
+    field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_MICRO_DELAY")
+}
+
+record(bo, "$(P)$(R)encNoiseFilter")
+{
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_ENC_NOISE_FILTER")
+}
+
+record(bo, "$(P)$(R)encSyncMode")
+{
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_ENC_SYNC_MODE")
+}
+
+record(bo, "$(P)$(R)encSwapAb")
+{
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_ENC_SWAP_AB")
+}
+
+record(bo, "$(P)$(R)encQuadMode")
+{
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_ENC_QUAD_MODE")
+}
+
+record(bo, "$(P)$(R)encSpiMode")
+{
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_ENC_SPI_MODE")
+}
+
+record(bo, "$(P)$(R)drvParallel")
+{
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_DRV_PARALLEL")
+}
+
+record(bo, "$(P)$(R)drvPark")
+{
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_DRV_PARK")
+}
+
+record(bo, "$(P)$(R)drvStopIndex")
+{
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_DRV_STOP_INDEX")
+}
+
+record(bo, "$(P)$(R)drvPosReset")
+{
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_DRV_POS_RESET")
+}
+
+record(longout, "$(P)$(R)encFrequency")
+{
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_ENC_FREQUENCY")
+    field(LOPR, 0)
+    field(HOPR, 3)
+}
+
+record(longout, "$(P)$(R)waveformRes")
+{
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_WAVEFORM_RES")
+    field(LOPR, 0)
+    field(HOPR, 0x0F)
+}
+
+record(longout, "$(P)$(R)syncDz")
+{
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_SYNC_DZ")
+}
+
+record(longout, "$(P)$(R)minHz")
+{
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_MIN_HZ")
+}
+
+record(longout, "$(P)$(R)maxHz")
+{
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_MAX_HZ")
+}
+
+
+record(longout, "$(P)$(R)wpc")
+{
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_WPC")
+}
+
+record(bo, "$(P)$(R)encSyncMode")
+{
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_ENC_SYNC_MODE")
+}
+
+record(bo, "$(P)$(R)drvTargetMode")
+{
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_DRV_TARGET_MODE")
+}
+
+record(bo, "$(P)$(R)drvSyncMode")
+{
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_DRV_SYNC_MODE")
+}

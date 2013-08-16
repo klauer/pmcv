@@ -1,0 +1,155 @@
+# read-only
+record(longin, "$(P)$(R)24v_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_24V")
+    field(SCAN, "I/O Intr")
+    #field(PINI, "1")
+    #field(SCAN, "1 second")
+}
+
+record(longin, "$(P)$(R)48v_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_48V")
+    #field(PINI, "1")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)5vSensor_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_5V_SENSOR")
+    #field(PINI, "1")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)5v_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_5V")
+    #field(PINI, "1")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)3v_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_3V")
+    #field(PINI, "1")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)button_1_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_BUTTON_1")
+    #field(PINI, "1")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)button_2_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_BUTTON_2")
+    #field(PINI, "1")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)button_3_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_BUTTON_3")
+    #field(PINI, "1")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)boxFirmware_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_BOX_FIRMWARE")
+    #field(PINI, "1")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)lostResponse_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_LOST_RESPONSE")
+    #field(PINI, "1")
+    field(SCAN, "I/O Intr")
+}
+
+
+record(longin, "$(P)$(R)error_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_ERROR")
+    #field(PINI, "1")
+    field(SCAN, "I/O Intr")
+}
+
+record(ai, "$(P)$(R)voltageError_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_VOLTAGE_ERROR")
+    #field(PINI, "1")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)serialError_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_SERIAL_ERROR")
+    #field(PINI, "1")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)hardwareError_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_HARDWARE_ERROR")
+    #field(PINI, "1")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)anybusError_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_ANYBUS_ERROR")
+    #field(PINI, "1")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)resetStatus_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_RESET_STATUS")
+    #field(PINI, "1")
+    field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(P)$(R)extCommError_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_EXT_COMM_ERROR")
+    #field(PINI, "1")
+    field(SCAN, "I/O Intr")
+}
+
+
+record(longin, "$(P)$(R)intCommError_R")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_INT_COMM_ERROR")
+    #field(PINI, "1")
+    field(SCAN, "I/O Intr")
+}
+
+# -- commands
+record(bo, "$(P)$(R)clearBoxErrors")
+{
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PMCV_CLEAR_BOX_ERRORS")
+}
+
