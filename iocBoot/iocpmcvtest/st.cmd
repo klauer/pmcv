@@ -17,24 +17,24 @@ epicsEnvShow "PMCV_IP"
 epicsEnvShow "PMCV_TCP_PORT"
 
 # tcp/ip option:
-drvAsynIPPortConfigure("IP1" ,"$(PMCV_IP):$(PMCV_TCP_PORT)",0,0,0)
+drvAsynIPPortConfigure("$(ASYN_PORT)" ,"$(PMCV_IP):$(PMCV_TCP_PORT)",0,0,0)
 
 # or the serial option:
-#drvAsynSerialPortConfigure("IP1", "/dev/ttyS0", 0, 0, 0)
-#asynSetOption("IP1", -1,"baud",xx)
-#asynSetOption("IP1", -1,"bits",8)
-#asynSetOption("IP1", -1,"parity","none")
-#asynSetOption("IP1", -1,"stop",1)
+#drvAsynSerialPortConfigure("$(ASYN_PORT)", "/dev/ttyS0", 0, 0, 0)
+#asynSetOption("$(ASYN_PORT)", -1,"baud",xx)
+#asynSetOption("$(ASYN_PORT)", -1,"bits",8)
+#asynSetOption("$(ASYN_PORT)", -1,"parity","none")
+#asynSetOption("$(ASYN_PORT)", -1,"stop",1)
 
 #PMCVCreateController(portName, PMCVPortName, numAxes, movingPollPeriod, idlePollPeriod)
-PMCVCreateController("$(PMCVPORT)", "IP1", 3, 20, 100)
+PMCVCreateController("$(PMCVPORT)", "$(ASYN_PORT)", 3, 20, 100)
 
 #asynSetTraceMask("$(PMCVPORT)", -1, 0x3)
 #asynSetTraceMask("$(PMCVPORT)", -1, 0xFF)
-#asynSetTraceMask("IP1", -1, 0xFF)
+#asynSetTraceMask("$(ASYN_PORT)", -1, 0xFF)
 
 ##asynSetTraceIOMask("$(PMCVPORT)", -1, 255)
-##asynSetTraceIOMask("IP1", -1, 255)
+##asynSetTraceIOMask("$(ASYN_PORT)", -1, 255)
 
 dbLoadRecords("$(TOP)/db/pmcv_general.db", "P=$(P),R=$(R),PORT=$(PMCVPORT),ADDR=0,TIMEOUT=1")
 dbLoadRecords("$(TOP)/db/pmcv_axis.db", "P=$(P),R=$(R)axis1:,PORT=$(PMCVPORT),ADDR=0,TIMEOUT=1")
