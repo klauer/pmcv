@@ -35,7 +35,7 @@ Installation
     2. The following lines set the prefix to all of the additional (i.e., non-motor record) PVs (with $(P)$(R)):
         ```
         epicsEnvSet("P", "$(P=MLL:)")
-        epicsEnvSet("R", "$(R=DDRIVE:)")
+        epicsEnvSet("R", "$(R=PMCV:)")
         ```
        Set the second quoted strings appropriately.
     3. The following line sets the autosave prefix for your PMCV PVs:
@@ -53,6 +53,7 @@ Installation
     5. If necessary, you can change the rate at which the controller is polled for positions and such:
         ```
         #PMCVCreateController(portName, PMCVPortName, numAxes, movingPollPeriod, idlePollPeriod)
+
         PMCVCreateController("$(PMCV_PORT)", "$(ASYN_PORT)", 1, 50, 100)
         ```
         The moving and idle poll periods are both in milliseconds. The former rate is used when an axis is in motion, the latter otherwise.
@@ -67,7 +68,7 @@ Installation
 5. Go to the top directory and `make`
 6. If all goes well:
     ```
-    $ cd iocBoot/iocpmcvitest
+    $ cd iocBoot/iocpmcvtest
     $ chmod +x st.cmd
     $ ./st.cmd
     ```
